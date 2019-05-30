@@ -48,13 +48,13 @@ variables:
     default: redist1
     type_hint: text
   - name: allow_redist_default_route
-    description: Setting to Allow the redistribution of the default route
-    default: True
+    description: Allow the redistribution of the Default Route?
+    default: sure
     type_hint: dropdown
     dd_list:
-      - key: True
+      - key: sure
         value: yes
-      - key: False
+      - key: nope
         value: no
   - name: peer_group_name
     description: Name for peer group
