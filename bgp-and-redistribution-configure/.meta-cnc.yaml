@@ -49,7 +49,7 @@ variables:
     type_hint: text
   - name: allow_redist_default_route
     description: Setting to Allow the redistribution of the default route
-    default: yes
+    default: True
     type_hint: dropdown
     dd_list:
       - key: True
