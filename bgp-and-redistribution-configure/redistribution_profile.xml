@@ -1,0 +1,20 @@
+<entry name="{{ virtual_router_name }}">
+    <protocol>
+              <redist-profile>
+                <entry name="redist">
+                  <filter>
+                    <type>
+                      <member>connect</member>
+                    </type>
+                    <interface>
+                      <member>ethernet1/2</member>
+                    </interface>
+                  </filter>
+                  <priority>1</priority>
+                  <action>
+                    <redist/>
+                  </action>
+                </entry>
+              </redist-profile>
+    </protocol>
+</entry>

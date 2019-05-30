@@ -1,0 +1,100 @@
+<entry name="{{ virtual_router_name }}">
+    <protocol>
+          <bgp>
+             <enable>yes</enable>
+                <dampening-profile>
+                  <entry name="default">
+                    <cutoff>1.25</cutoff>
+                    <reuse>0.5</reuse>
+                    <max-hold-time>900</max-hold-time>
+                    <decay-half-life-reachable>300</decay-half-life-reachable>
+                    <decay-half-life-unreachable>900</decay-half-life-unreachable>
+                    <enable>yes</enable>
+                  </entry>
+                </dampening-profile>
+                <routing-options>
+                  <graceful-restart>
+                    <enable>yes</enable>
+                  </graceful-restart>
+                  <med>
+                    <deterministic-med-comparison>no</deterministic-med-comparison>
+                  </med>
+                  <aggregate>
+                    <aggregate-med>no</aggregate-med>
+                  </aggregate>
+                </routing-options>
+                <reject-default-route>no</reject-default-route>
+                <router-id>{{ router_id }}</router-id>
+                <local-as>{{ local_as }}</local-as>
+                <install-route>yes</install-route>
+                <redist-rules>
+                  <entry name="{{ redistribution_profile_name }}">
+                    <address-family-identifier>ipv4</address-family-identifier>
+                    <enable>yes</enable>
+                    <set-origin>incomplete</set-origin>
+                  </entry>
+                </redist-rules>
+                <allow-redist-default-route>{{ allow_redist_default_route }}</allow-redist-default-route>
+                <global-bfd>
+                  <profile>None</profile>
+                </global-bfd>
+                <enforce-first-as>no</enforce-first-as>
+                <peer-group>
+                  <entry name="{{ peer_group_name }}">
+                    <type>
+                      <ebgp>
+                        <remove-private-as>yes</remove-private-as>
+                        <import-nexthop>original</import-nexthop>
+                        <export-nexthop>resolve</export-nexthop>
+                      </ebgp>
+                    </type>
+                    <peer>
+                      <entry name="{{ peer_name }}">
+                        <peer-address>
+                          <ip>{{ peer_ip }}</ip>
+                        </peer-address>
+                        <connection-options>
+                          <incoming-bgp-connection>
+                            <remote-port>0</remote-port>
+                            <allow>yes</allow>
+                          </incoming-bgp-connection>
+                          <outgoing-bgp-connection>
+                            <local-port>0</local-port>
+                            <allow>yes</allow>
+                          </outgoing-bgp-connection>
+                          <multihop>0</multihop>
+                          <keep-alive-interval>30</keep-alive-interval>
+                          <open-delay-time>0</open-delay-time>
+                          <hold-time>90</hold-time>
+                          <idle-hold-time>15</idle-hold-time>
+                          <min-route-adv-interval>30</min-route-adv-interval>
+                        </connection-options>
+                        <subsequent-address-family-identifier>
+                          <unicast>yes</unicast>
+                          <multicast>no</multicast>
+                        </subsequent-address-family-identifier>
+                        <local-address>
+                          <ip>{{ local_address }}</ip>
+                          <interface>{{ local_interface }}</interface>
+                        </local-address>
+                        <bfd>
+                          <profile>Inherit-vr-global-setting</profile>
+                        </bfd>
+                        <max-prefixes>5000</max-prefixes>
+                        <enable>yes</enable>
+                        <peer-as>{{ peer_as }}</peer-as>
+                        <enable-mp-bgp>no</enable-mp-bgp>
+                        <address-family-identifier>ipv4</address-family-identifier>
+                        <enable-sender-side-loop-detection>yes</enable-sender-side-loop-detection>
+                        <reflector-client>non-client</reflector-client>
+                        <peering-type>unspecified</peering-type>
+                      </entry>
+                    </peer>
+                    <aggregated-confed-as-path>yes</aggregated-confed-as-path>
+                    <soft-reset-with-stored-info>no</soft-reset-with-stored-info>
+                    <enable>yes</enable>
+                  </entry>
+                </peer-group>
+           </bgp>
+    </protocol>
+</entry>

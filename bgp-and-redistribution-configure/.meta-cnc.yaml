@@ -39,20 +39,8 @@ variables:
 # snippets used for api configuration including xpath and element as file name
 # files will load in the order listed
 snippets:
-  - name: certificate
-    xpath: /config/shared/certificate
-    file: certificate.xml
-  - name: forward-trust
-    xpath: /config/shared/ssl-decrypt/forward-trust-certificate
-    file: forward_trust.xml
-  - name: eicar-url
-    xpath: /config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/profiles/custom-url-category
-    file: eicar_url.xml
-  - name: decrypt-profile
-    xpath: /config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/profiles/decryption
-    file: decrypt_profile.xml
-  - name: decrypt_rule
-    xpath:  /config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/rulebase/decryption/rules
-    file: decrypt_rule.xml
+  - name: bgp
+    xpath: /config/devices/entry[@name='localhost.localdomain']/network/virtual-router
+    file: bgp.xml
 # ---------------------------------------------------------------------
 # end of snippets section
