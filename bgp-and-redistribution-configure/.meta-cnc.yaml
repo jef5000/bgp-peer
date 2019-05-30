@@ -87,5 +87,8 @@ snippets:
   - name: bgp
     xpath: /config/devices/entry[@name='localhost.localdomain']/network/virtual-router
     file: bgp.xml
+  - name: redistribution_profile
+    xpath: /config/devices/entry[@name='localhost.localdomain']/network/virtual-router
+    file: redistribution_profile.xml
 # ---------------------------------------------------------------------
 # end of snippets section
