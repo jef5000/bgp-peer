@@ -31,6 +31,51 @@ variables:
     description: Firewall hostname
     default: myFirewall
     type_hint: text
+  - name: virtual_router_name
+    description: Name of the virtual router (must already exist)
+    default: default
+    type_hint: text
+  - name: router_id
+    description: Router ID for BGP Peering
+    default: 10.0.0.1
+    type_hint: text
+  - name: local_as
+    description: AS Number for the local Virtual Router
+    default: 40000
+    type_hint: text
+  - name: redistribution_profile_name
+    description: Name of the Redistribution Profile
+    default: redist1
+    type_hint: text
+  - name: allow_redist_default_route
+    description: Setting to Allow the redistribution of the default route
+    default: yes
+    type_hint: dropdown
+    dd_list:
+      - key: yes
+        value: yes
+      - key: no
+        value: no
+  - name: peer_group_name
+    description: Name for peer group
+    default: peer-group-1
+    type_hint: text
+  - name: peer_ip
+    description: IP Address of the Peer Router
+    default: 0.0.0.0
+    type_hint: text
+  - name: local_address
+    description: Local Interface Address/Subnet Mask to enable BGP
+    default: 10.0.0.1/8
+    type_hint: text
+  - name: local_interface
+    description: Local Interface Name to enable BGP
+    default: ethernet1/1
+    type_hint: text
+  - name: peer_as
+    description: AS Number for the BGP Peer
+    default: 40000
+    type_hint: text
 # ---------------------------------------------------------------------
 # end of variables section
 
