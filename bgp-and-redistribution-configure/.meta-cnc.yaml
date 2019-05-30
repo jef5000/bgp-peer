@@ -60,6 +60,10 @@ variables:
     description: Name for peer group
     default: peer-group-1
     type_hint: text
+  - name: peer_name
+    description: Name for the peer router
+    default: peer-router-1
+    type_hint: text
   - name: peer_ip
     description: IP Address of the Peer Router
     default: 0.0.0.0
