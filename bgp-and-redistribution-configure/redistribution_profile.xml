@@ -1,7 +1,7 @@
 <entry name="{{ virtual_router_name }}">
     <protocol>
               <redist-profile>
-                <entry name="redist">
+                <entry name="{{ redistribution_profile_name }}">
                   <filter>
                     <type>
                       <member>connect</member>
