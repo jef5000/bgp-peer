@@ -48,10 +48,10 @@ variables:
     default: True
     type_hint: dropdown
     dd_list:
-      - key: True
-        value: yes
-      - key: False
-        value: no
+      - key: Yes
+        value: "yes"
+      - key: No
+        value: "no"
   - name: peer_group_name
     description: Name for peer group
     default: peer-group-1
