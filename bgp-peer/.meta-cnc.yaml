@@ -44,7 +44,7 @@ variables:
     default: 40000
     type_hint: text
   - name: redist_default_route
-    description: IKE Version
+    description: Redistribute the default route?
     default: True
     type_hint: dropdown
     dd_list:
