@@ -27,7 +27,7 @@
                 <router-id>{{ router_id }}</router-id>
                 <local-as>{{ local_as }}</local-as>
                 <install-route>yes</install-route>
-                <allow-redist-default-route>yes</allow-redist-default-route>
+                <allow-redist-default-route>{{ allow_redist_default_route }}</allow-redist-default-route>
                 <global-bfd>
                   <profile>None</profile>
                 </global-bfd>
