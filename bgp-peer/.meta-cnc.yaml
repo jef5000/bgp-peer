@@ -88,9 +88,6 @@ variables:
 # snippets used for api configuration including xpath and element as file name
 # files will load in the order listed
 snippets:
-  - name: redistribution_profile
-    xpath: /config/devices/entry[@name='localhost.localdomain']/network/virtual-router
-    file: redistribution_profile.xml
   - name: bgp
     xpath: /config/devices/entry[@name='localhost.localdomain']/network/virtual-router
     file: bgp.xml

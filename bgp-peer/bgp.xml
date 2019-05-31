@@ -17,22 +17,16 @@
                     <enable>yes</enable>
                   </graceful-restart>
                   <med>
-                    <deterministic-med-comparison>no</deterministic-med-comparison>
+                    <deterministic-med-comparison>yes</deterministic-med-comparison>
                   </med>
                   <aggregate>
-                    <aggregate-med>no</aggregate-med>
+                    <aggregate-med>yes</aggregate-med>
                   </aggregate>
                 </routing-options>
                 <reject-default-route>no</reject-default-route>
                 <router-id>{{ router_id }}</router-id>
                 <local-as>{{ local_as }}</local-as>
                 <install-route>yes</install-route>
-                <redist-rules>
-                  <entry name="{{ redistribution_profile_name }}">
-                    <address-family-identifier>ipv4</address-family-identifier>
-                    <enable>yes</enable>
-                    <set-origin>incomplete</set-origin>
-                  </entry>
                 </redist-rules>
                 <allow-redist-default-route>yes</allow-redist-default-route>
                 <global-bfd>
