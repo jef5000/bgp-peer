@@ -1,10 +1,10 @@
 # skillet preamble information used by panhandler
 # ---------------------------------------------------------------------
 # unique snippet name
-name: bgp-and-redistribution-configure
+name: bgp-peer
 # label used for menu selection
-label: bgp-and-redistribution-configure
-description: This skillet will configure BGP and a redistribution profile
+label: bgp-peer
+description: This skillet will configure a BGP peer
 
 # type of device configuration
 # common types are panorama, panos, and template
