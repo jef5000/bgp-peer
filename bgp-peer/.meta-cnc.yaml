@@ -43,10 +43,6 @@ variables:
     description: AS Number for the local Virtual Router
     default: 40000
     type_hint: text
-  - name: redistribution_profile_name
-    description: Name of the Redistribution Profile
-    default: redist1
-    type_hint: text
   - name: allow_redist_default_route
     description: Allow the redistribution of the Default Route?
     default: sure
